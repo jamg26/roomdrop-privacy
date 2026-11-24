@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoomDrop privacy policy</title>
+<meta name="description" content="How RoomDrop handles your files, the local network, the camera and the Pro purchase.">
+<style>
+  :root { color-scheme: light dark; --bg: #FBF8FF; --fg: #1D1A22; --muted: #4A4453; --accent: #5B2E91; --line: #E8E0EB; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #16111C; --fg: #E8E0EA; --muted: #CCC3D5; --accent: #D7BAFF; --line: #38323E; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  h1, h2 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+  h1 { font-size: 2rem; margin-top: 0; } h2 { font-size: 1.35rem; margin-top: 2.2rem; color: var(--accent); }
+  a { color: var(--accent); } a:focus-visible { outline: 3px solid #FF8A3D; outline-offset: 2px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; display: block; overflow-x: auto; }
+  th, td { border: 1px solid var(--line); padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1 id="top">RoomDrop privacy policy</h1>
+<p>Effective 24 November 2026 · Version 1.0.0 · Published at <a href="https://jamg26.github.io/roomdrop-privacy/">https://jamg26.github.io/roomdrop-privacy/</a></p>
+<p>RoomDrop is made by JAMGSOFT (contact: <a href="mailto:jammmg26@gmail.com">jammmg26@gmail.com</a>). It sends files you choose from your Android phone or tablet to your Android TV or Google TV on the same local network. This policy explains what RoomDrop handles, where it goes, and how to delete it.</p>
+<h2 id="the-short-version">The short version</h2>
+<ul><li>Your files go directly from your phone to your TV over your own network. JAMGSOFT has no server, never receives your files, and keeps no copy.</li><li>Transfers are encrypted, and the phone checks the TV's certificate fingerprint before it sends anything.</li><li>No ads, no analytics, no account and no tracking by JAMGSOFT.</li><li>Google Play handles the optional Pro purchase. The Google Play Billing library sends Google its own purchase and diagnostic data, described below.</li></ul>
+<h2 id="what-roomdrop-handles">What RoomDrop handles</h2>
+<p><strong>Files you choose to send.</strong> On the phone, RoomDrop reads only the files you pick in Android's file picker. It reads each one twice: once to calculate a SHA-256 checksum, and once to send it. It doesn't copy them, and it doesn't browse your storage. It keeps a reference to your current selection (the document address, name, size and type) so the selection survives a restart; it releases that access when the files are sent or when you forget the selection.</p>
+<p><strong>Files your TV receives.</strong> On the TV, received files are kept only in RoomDrop's own storage (its Inbox), under random file names, after their size and checksum match what the phone announced. Other apps can open an Inbox file only when you choose Open. Uninstalling RoomDrop from the TV deletes the Inbox.</p>
+<p><strong>Transfer history.</strong> Each device keeps a short local history of batches (device name, time, file names, sizes, and whether each file was verified), so it can show results and recover after an interruption.</p>
+<p><strong>The local network.</strong> While the TV's Receive screen is open, RoomDrop listens on the TV's local network address and announces itself on the local network (mDNS/DNS-SD) with the TV's device name, a port number and a random session number. Other devices on the same network can see that announcement. It stops when you leave Receive. The phone sends the TV a device name for the approval screen. RoomDrop shows only the TV's local address and port; it doesn't read or show your network's name or other network details.</p>
+<p><strong>Pairing codes.</strong> Each code is random, lasts two minutes, works for one batch, and stays in memory only. Codes are never saved, logged or backed up.</p>
+<p><strong>The camera (optional).</strong> On the phone, the camera is used only to read the QR code on your TV. Camera frames are analysed in memory and discarded; nothing is recorded or saved. If you don't allow the camera, you can type the details instead.</p>
+<p><strong>The Pro purchase.</strong> Google Play processes payment. RoomDrop keeps Google's signed purchase receipt on your phone, encrypted with an Android Keystore key and excluded from backups, and checks it on the device. JAMGSOFT never sees your payment details.</p>
+<h2 id="what-leaves-your-devices">What leaves your devices</h2>
+<table><thead><tr><th scope="col">Data</th><th scope="col">Where it goes</th><th scope="col">Why</th></tr></thead><tbody><tr><td>The files you send, their names, sizes, types and checksums, and your phone's device name</td><td>Your own TV, directly over your local network, encrypted</td><td>To transfer the files you chose</td></tr><tr><td>Purchase information, app interaction and diagnostic data, and device identifiers used by Google Play services</td><td>Google, through the Google Play Billing library</td><td>To sell and restore Pro, prevent fraud and run Google Play; see Google's privacy policy</td></tr><tr><td>Anything you write in a support email</td><td>JAMGSOFT, by email you choose to send</td><td>To answer you</td></tr></tbody></table>
+<p>RoomDrop has no advertising, analytics or crash-reporting SDK and doesn't use the advertising ID. JAMGSOFT doesn't sell or share personal data.</p>
+<h2 id="backups">Backups</h2>
+<p>RoomDrop opts out of Android's cloud backup and device-to-device transfer. Your Inbox, history, selection and purchase record stay on the device they're on.</p>
+<h2 id="deletion">Deleting your data</h2>
+<ul><li><strong>On the phone:</strong> Privacy → Clear send history, Forget selected files (this releases access; your original files aren't touched), and Clear cache. Uninstalling removes everything RoomDrop stored.</li><li><strong>On the TV:</strong> Inbox → select a file → Delete, or Storage → Delete all Inbox files, Clear cache and Clear receive history. Uninstalling RoomDrop removes the Inbox and everything else it stored.</li><li><strong>Pro purchase:</strong> Google keeps purchase records under its own policy. A refund or revocation through Google Play ends Pro on the phone; nothing else is deleted.</li><li><strong>Support email:</strong> write to <a href="mailto:jammmg26@gmail.com">jammmg26@gmail.com</a> to delete our correspondence. We keep support email only as long as needed to resolve the request.</li></ul>
+<h2 id="security">Security</h2>
+<p>Transfers use TLS from Android's own security libraries, with a fresh certificate each time Receive opens. The phone accepts only the certificate whose full SHA-256 fingerprint appears in the TV's code, and the TV accepts files only after you approve them on screen. No system is perfectly secure; if you believe you've found a security problem, please email us.</p>
+<h2 id="children">Children</h2>
+<p>RoomDrop is a general utility not directed at children, and it doesn't knowingly collect personal data from anyone.</p>
+<h2 id="changes">Changes</h2>
+<p>If this policy changes, the new version will be published at the address above with a new effective date, and material changes will be noted in the app's release notes.</p>
+<h2 id="contact">Contact</h2>
+<p>JAMGSOFT · <a href="mailto:jammmg26@gmail.com">jammmg26@gmail.com</a></p>
+</main>
+</body>
+</html>
